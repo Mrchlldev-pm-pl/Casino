@@ -31,6 +31,9 @@ coin_flipUI: "§l§6Coin Flip"
 minimum_amount: 1000
 ```
 
+<h1>Dependency</h1>
+<a href="https://poggit.pmmp.io/p/EconomyAPI/5.7.2">EconomyAPI</a>
+
 <h1>If you use my plugins and like them make sure to donate</h1>
 
 <a href="https://www.paypal.me/deadbushnetric" 
