@@ -1,0 +1,16 @@
+# Config
+# use § as color code
+
+# Button Names
+money_bet: "§lMoney Bet"
+number_game: "§lNumber Game"
+coin_flip: "§lCoin Flip"
+
+# UI Names
+main_ui: "§l§6Casino"
+money_betUI: "§l§6Money Bet"
+number_gameUI: "§l§6Number Game"
+coin_flipUI: "§l§6Coin Flip"
+
+# Bet amount
+minimum_amount: 1000
