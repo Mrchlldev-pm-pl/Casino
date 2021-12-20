@@ -67,7 +67,7 @@ class main extends PluginBase implements Listener {
             }
 
             $money = EconomyAPI::getInstance()->myMoney($player);
-            if($data[0] >= $this->getConfig()->get("minimum_amount")){
+            if($data[0] >= $this->getConfig()->get("minimum_amount") and $data[0] <= $this->getConfig()->get("maximum_amount")){
                 if($money >= $data[0]){
                     switch(mt_rand(1, 10)){
                         case 1:
@@ -210,7 +210,7 @@ class main extends PluginBase implements Listener {
                     $player->sendMessage("§l§6CS §r§e>> §fYou don't have enough money");
                 }
             }else{
-                $player->sendMessage("§l§6CS §r§e>> §fMinimum amount you can enter is $" . $this->getConfig()->get("minimum_amount"));
+                $player->sendMessage("§l§6CS §r§e>> §fAmount you can enter is min $" . $this->getConfig()->get("minimum_amount") . " and max $" . $this->getConfig()->get("maximum_amount"));
             }
 
         });
@@ -227,7 +227,7 @@ class main extends PluginBase implements Listener {
             }
             $money = EconomyAPI::getInstance()->myMoney($player);
             if($data[0] <= 10){
-                if($data[1] >= $this->getConfig()->get("minimum_amount")){
+                if($data[1] >= $this->getConfig()->get("minimum_amount") and $data[0] <= $this->getConfig()->get("maximum_amount")){
                     if($money >= $data[1]){
                         $number = random_int(1,10);
                         if($data[0] == $number){
@@ -242,7 +242,7 @@ class main extends PluginBase implements Listener {
                         $player->sendMessage("§l§6CS §r§e>> §fYou don't have enough money");
                     }
                 }else{
-                    $player->sendMessage("§l§6CS §r§e>> §fMinimum amount you can enter is $" . $this->getConfig()->get("minimum_amount"));
+                    $player->sendMessage("§l§6CS §r§e>> §fAmount you can enter is min $" . $this->getConfig()->get("minimum_amount") . " and max $" . $this->getConfig()->get("maximum_amount"));
                 }
             }else{
                 $player->sendMessage("§l§6CS §r§e>> §fPlease enter the number between 1-10");
@@ -262,7 +262,7 @@ class main extends PluginBase implements Listener {
             }
             $money = EconomyAPI::getInstance()->myMoney($player);
             if(strtolower($data[0]) == "heads"){
-                if($data[1] >= $this->getConfig()->get("minimum_amount")){
+                if($data[1] >= $this->getConfig()->get("minimum_amount") and $data[0] <= $this->getConfig()->get("maximum_amount")){
                     switch(mt_rand(1,2)){
                         case 1:
                             $value = $data[1] * 2;
@@ -276,10 +276,10 @@ class main extends PluginBase implements Listener {
                         break;
                     }
                 }else{
-                    $player->sendMessage("§l§6CS §r§e>> §fMinimum amount you can enter is $" . $this->getConfig()->get("minimum_amount"));
+                    $player->sendMessage("§l§6CS §r§e>> §fAmount you can enter is min $" . $this->getConfig()->get("minimum_amount") . " and max $" . $this->getConfig()->get("maximum_amount"));
                 }
             }elseif(strtolower($data[0]) == "tails"){
-                if($data[1] >= $this->getConfig()->get("minimum_amount")){
+                if($data[1] >= $this->getConfig()->get("minimum_amount") and $data[0] <= $this->getConfig()->get("maximum_amount")){
                     switch(mt_rand(1,2)){
                         case 1:
                             $value = $data[1] * 2;
@@ -293,7 +293,7 @@ class main extends PluginBase implements Listener {
                         break;
                     }
                 }else{
-                    $player->sendMessage("§l§6CS §r§e>> §fMinimum amount you can enter is $" . $this->getConfig()->get("minimum_amount"));
+                    $player->sendMessage("§l§6CS §r§e>> §fAmount you can enter is min $" . $this->getConfig()->get("minimum_amount") . " and max $" . $this->getConfig()->get("maximum_amount"));
                 }
             }else{
                 $player->sendMessage("§l§6CS §r§e>> §fPlease enter heads or tails");
