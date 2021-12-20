@@ -29,6 +29,7 @@ coin_flipUI: "§l§6Coin Flip"
 
 # Bet amount
 minimum_amount: 1000
+maximum_amount: 5000
 ```
 
 <h1>Dependency</h1>
