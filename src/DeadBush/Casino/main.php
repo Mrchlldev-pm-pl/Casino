@@ -11,10 +11,10 @@ use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use onebone\economyapi\EconomyAPI;
-use DeadBush\Casino\FormAPI\Form;
-use DeadBush\Casino\FormAPI\FormsUI;
-use DeadBush\Casino\FormAPI\CustomForm;
-use DeadBush\Casino\FormAPI\SimpleForm;
+use jojoe77777\FormAPI\Form;
+use jojoe77777\FormAPI\FormsUI;
+use jojoe77777\FormAPI\CustomForm;
+use jojoe77777\FormAPI\SimpleForm;
 
 class main extends PluginBase implements Listener {
     public function onEnable(): void{
@@ -26,7 +26,7 @@ class main extends PluginBase implements Listener {
         switch($cmd->getName()){
             case "casino":
                 if($player instanceof Player){
-                    $this->casinoui($player);
+                    $this->moneybet($player);
                 }
         }
         return true;
